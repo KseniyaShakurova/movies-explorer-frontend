@@ -1,0 +1,237 @@
+.aboutme {
+    max-width: 320px;
+    margin: 0;
+    padding: 0 0 70px;
+}
+
+@media (min-width: 767px) {
+    .aboutme {
+        max-width: 768px;
+        padding-bottom: 91px;
+    }
+}
+
+@media (min-width: 1023px) {
+    .aboutme {
+        max-width: 1024px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme {
+        max-width: 1280px;
+    }
+}
+
+.aboutme__header {
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -0.72px;
+    margin: 0 auto 28px;
+    max-width: 292px;
+}
+
+@media (min-width: 767px) {
+    .aboutme__header {
+        max-width: 652px;
+        font-size: 22px;
+        letter-spacing: -0.88px;
+        margin: 0 66px 23px 50px;
+    }
+}
+
+@media (min-width: 1023px) {
+    .aboutme__header {
+        margin: 0 0px 23px 177px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__header {
+        max-width: 600px;
+        margin: 0 610px 23px 70px;
+    }
+}
+
+.aboutme__container {
+    border-top: 1px solid #DADADA;
+    max-width: 292px;
+    margin: 0 14px 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+@media (min-width: 767px) {
+    .aboutme__container {
+        flex-direction: row-reverse;
+        max-width: 668px;
+        width: 100%;
+        margin: 0 50px;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1023px) {
+    .aboutme__container {
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__container {
+        max-width: 1140px;
+    }
+}
+
+.aboutme__avatar {
+    width: 292px;
+    height: 352px;
+    border-radius: 10px;
+    margin: 60px auto 40px;
+    object-fit: cover;
+}
+
+@media (min-width: 767px) {
+    .aboutme__avatar {
+        width: 255px;
+        height: 307px;
+        margin-top: 66px;
+        margin-left: 65px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__avatar {
+        width: 270px;
+        height: 327px;
+        margin: 65px 0 0;
+    }
+}
+
+.aboutme__info {
+    max-width: 292px;
+    min-height: 307px;
+}
+
+@media (min-width: 767px) {
+    .aboutme__info {
+        max-width: 364px;
+        margin-top: 66px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__info {
+        max-width: 600px;
+    }
+}
+
+.aboutme__name {
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -1.2px;
+    margin: 0 auto 20px;
+    text-align: left;
+}
+
+@media (min-width: 767px) {
+    .aboutme__name {
+        width: 100%;
+        line-height: 40px; 
+        letter-spacing: -1.6px;
+        font-size: 40px;
+        margin: 0 0 16px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__name {
+        line-height: 58px;
+        letter-spacing: -2px;
+        font-size: 50px;
+        margin-bottom: 18px;
+    }
+}
+
+.aboutme__job {
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 145.455% */
+    margin: 0 auto 20px;
+}
+
+@media (min-width: 767px) {
+    .aboutme__job {
+        width: 100%;
+        line-height: 18px; 
+        font-size: 12px;
+        margin: 0 0 20px 0;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__job {
+        line-height: 20px; 
+        font-size: 18px;
+        margin-bottom: 26px;
+    }
+}
+
+.aboutme__text {
+    margin: 0 auto 40px;
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 145.455% */
+}
+
+@media (min-width: 767px) {
+    .aboutme__text {
+       font-size: 12px;
+       line-height: 18px;
+       margin-bottom: 87px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .aboutme__text {
+        line-height: 22px; 
+        font-size: 14px;
+        margin-bottom: 99px;
+    }
+}
+
+.aboutme__link {
+    text-decoration: none;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0 auto;
+    transition: opacity 1s ease; 
+    cursor: pointer;
+}
+
+.aboutme__link:hover {
+    opacity: 0.7;
+ }
+
+@media (min-width: 767px) {
+    .aboutme__link {
+       font-size: 14px;
+    }
+}
