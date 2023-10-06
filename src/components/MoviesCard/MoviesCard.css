@@ -1,0 +1,134 @@
+.moviescard__item {
+    list-style: none;
+    max-width: 300px;
+    min-height: 271px;
+    background-color: #222222;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 767px) {
+    .moviescard__item {
+       max-width: 342px;
+       min-height: 309px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .moviescard__item {
+       max-width: 360px;
+       min-height: 319px;
+    }
+}
+
+.moviescard__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+}
+
+@media (min-width: 767px) {
+    .moviescard__info {
+      padding: 18px;
+    }
+}
+
+.moviescard__title {
+    margin: 0;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.moviescard__time {
+    margin: 0;
+    color: #8B8B8B;
+    text-align: right;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    max-width: 50px;
+    width: 100%;
+}
+
+@media (min-width: 767px) {
+    .moviescard__time {
+      font-size: 13px;
+      max-width: 70px;
+    }
+}
+
+.moviescard__img {
+    width: 300px;
+    height: 168px;
+}
+
+@media (min-width: 767px) {
+    .moviescard__img {
+        width: 342px;
+        height: 190px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .moviescard__img {
+        width: 360px;
+        height: 200px;
+    }
+}
+
+.moviescard__buttons {
+    margin: 0 auto;
+}
+
+.moviescard__button {
+    margin: 14px auto;
+    width: 100px;
+    height: 29px;
+    border-radius: 30px;
+    transition: opacity 1s ease; 
+    cursor: pointer;
+    background-color: #313131;
+    color: #FFF;
+    text-align: center;
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 11px;
+    border: none;
+    padding: 0;
+}
+
+.moviescard__button:hover {
+    opacity: 0.8;
+ }
+
+ @media (min-width: 767px) {
+    .moviescard__button {
+        margin: 18px auto;
+    }
+}
+
+ .moviescard__button_active {
+    background-image: url('../../images/buttonsev.svg');
+ }
+
+ .moviescard__button_delete {
+    background-image: url('../../images/icon__delete.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 7px 7px;
+    transition: opacity 1s ease; 
+    cursor: pointer;
+ }
