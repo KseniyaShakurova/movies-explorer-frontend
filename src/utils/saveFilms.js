@@ -1,6 +1,6 @@
-import filmOne from '../images/filmOne.svg';
-import filmTwo  from '../images/filmTwo.svg';
-import filmThree from '../images/filmThree.svg';
+import filmOne from '../images/filmOne.png';
+import filmTwo  from '../images/filmTwo.png';
+import filmThree from '../images/filmThree.png';
 
 const saveFilms = [
     {   

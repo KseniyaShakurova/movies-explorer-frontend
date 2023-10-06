@@ -1,12 +1,12 @@
-.menu__popup {
+.menu {
     display: flex;
     position: fixed;
-    justify-content: flex-end;
     max-width: 320px;
-    min-height: 780px;
     width: 100%;
     height: 100%;
     margin: 0;
+    top: 0;
+    right: 0;
     background-color: rgba(0,0,0,0.3);
     background-size: cover;
     visibility: hidden;
@@ -15,27 +15,27 @@
     transition: visibility .7s, opacity 0.1s linear;
 }
 
-@media (min-width: 767px) {
-    .menu__popup {
+@media (min-width: 550px) {
+    .menu {
         max-width: 1279px;
         width: 520px;
-        width: 100%;
         right: 0;
     }
 }
 
-@media (min-width: 1279px) {
-    .menu__popup {
+@media (min-width: 768px) {
+    .menu {
         display: none;
     }
 }
 
-.menu__opened {
+.menu_opened {
     visibility: visible;
     opacity: 1;
 }
 
-.menu__popup_conteiner {
+.menu__popup {
+    max-width: 320px;
     width: 100%;
     height: 100%;
     background-color: #202020;
@@ -44,16 +44,15 @@
     display: flex;
     flex-direction: column;
     position: relative;
-    right: 0;
 }
 
-@media (min-width: 767px) {
-    .menu__popup_conteiner {
+@media (min-width: 550px) {
+    .menu__popup {
         max-width: 520px;
     }
 }
 
-.menu__button_close {
+.menu__button {
     background-image: url('../../images/btnclose.svg');
     background-position: center;
     background-repeat: no-repeat;
@@ -71,47 +70,46 @@
     right: 13.44px;
 }
 
-.menu__button_close:hover {
+.menu__button:hover {
     opacity: 0.8;
 }
 
-.menu__conteiner {
+.menu__popup-content {
+    padding: 99.44px 10px 48px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 0 auto;
-    padding-top: 99.44px;
-    padding-bottom: 48px;
-    width: 100%;
-}
-
-.menu__list {
-    max-width: 300px;
-    margin: 0 auto;
-    padding: 0;
-    padding-bottom: 367px;
-    display: grid;
-    gap: 24px;
-    list-style: none;
-    width: 100%;
+    margin: 0;
 }
 
 @media (min-width: 767px) {
-    .menu__list {
-        gap: 28px;
-        max-width: 340px;
-        padding-bottom: 500px;
+    .menu__popup-content {
+        padding: 105.4px 90px 92px;
     }
 }
 
-.menu__item {
+.menu__popup-list {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 24px;
+    list-style: none;
+}
+
+@media (min-width: 767px) {
+    .menu__popup-list {
+        gap: 28px;
+    }
+}
+
+.menu__popup-item {
     text-align: center;
 }
 
-.menu__link {
+.menu__popup-link {
     text-decoration: none;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -121,53 +119,47 @@
     cursor: pointer;
 }
 
-.menu__link:hover {
+.menu__popup-link:hover {
     opacity: 0.7;
  }
 
-.menu__link_line {
+.menu__popup-link-line {
     border-bottom: 2px solid #FFF;
 }
 
-.menu__footer {
+.menu__popup-footer {
+    margin: 0 auto;
     max-width: 100px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0;
+    padding: 444px 0 0;
     cursor: pointer;
     transition: opacity 1s ease;
     }
     
-    .menu__footer:hover {
+    .menu__popup-footer:hover {
     opacity: 0.7;
     }
 
-@media (min-width: 767px) {
-    .menu__footer {
-        margin-bottom: 92px;
-    }
-}
-
-.menu__account {
+.menu__popup-account {
     text-decoration: none;
     color: #FFF;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
     transition: opacity 1s ease; 
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.menu__account:hover {
+.menu__popup-account:hover {
     opacity: 0.7;
  }
 
-.menu__btn {
+.menu__popup-btn {
     background-image: url('../../images/icon__account.svg');
     background-color: #313131;
     background-size: 10px 10px;

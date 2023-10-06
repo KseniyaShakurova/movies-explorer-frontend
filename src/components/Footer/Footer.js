@@ -8,25 +8,29 @@ function Footer() {
       <h3 className="footer__title">
         Учебный проект Яндекс.Практикум х BeatFilm.
       </h3>
-      <div className="footer__list">
-        <nav className="footer__links">
-          <Link
-            className="footer__link"
-            to="https://practicum.yandex.ru/"
-            target="_blank"
-          >
-            Яндекс.Практикум
-          </Link>
-          <Link
-            className="footer__link"
-            to="https://github.com/KseniyaShakurova"
-            target="_blank"
-          >
-            Github
-          </Link>
-        </nav>
+      <nav className="footer__list">
+        <ul className="footer__links">
+          <li className="footer__item">
+            <Link
+              className="footer__link"
+              to="https://practicum.yandex.ru/"
+              target="_blank"
+            >
+              Яндекс.Практикум
+            </Link>
+          </li>
+          <li className="footer__item">
+            <Link
+              className="footer__link"
+              to="https://github.com/KseniyaShakurova"
+              target="_blank"
+            >
+              Github
+            </Link>
+          </li>
+        </ul>
         <p className="footer__copyright">©2023</p>
-      </div>
+      </nav>
     </footer>
   );
 }

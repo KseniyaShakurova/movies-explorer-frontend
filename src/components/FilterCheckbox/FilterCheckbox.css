@@ -1,21 +1,18 @@
 .filterCheckbox {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: center;
-    max-width: 148px;
     gap: 13px;
-    margin: 0 0 63px 0px;
 }
 
 @media (min-width: 767px) {
     .filterCheckbox {
-       max-width: 167px;
        gap: 14px;
     }
 }
 
 .filterCheckbox__title {
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -38,6 +35,15 @@
 	font-size: 14px;
 	user-select: none;
 }
+
+.filterCheckbox__switch {
+    transition: opacity 1s ease; 
+    cursor: pointer;
+}
+
+.filterCheckbox__switch:hover {
+    opacity: 0.7;
+ }
 
 .filterCheckbox__label .filterCheckbox__switch {
     position: relative;	

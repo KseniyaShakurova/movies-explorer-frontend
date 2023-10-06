@@ -1,28 +1,16 @@
 .lead {
-    max-width: 320px;
     margin: 0 auto;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    padding: 75px 0 0 0;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
     background-color: #073042;
-}
-
-@media (min-width: 767px) {
-    .lead {
-        max-width: 768px;
-    }
-}
-
-@media (min-width: 1023px) {
-    .lead {
-        max-width: 1024px;
-    }
 }
 
 @media (min-width: 1279px) {
     .lead {
-        max-width: 1280px;
+        padding: 75px 70px;
         flex-direction: row;
     }
 }
@@ -45,7 +33,7 @@
     .lead__logo {
         width: 310px;
         height: 304px;
-        margin: 0px 70px 195px 190px;
+        margin: 0;
     }
 }
 
@@ -53,23 +41,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0 auto;
 }
 
 @media (min-width: 1279px) {
     .lead__about {
+        margin: 0;
         order: -1;
-        margin-left: 70px;
         align-items: flex-start;
     }
 }
 
 .lead__title {
-    max-width: 330px;
-    width: 100%;
-    min-height: 114px;
     color: #FFF;
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -80,7 +66,6 @@
 @media (min-width: 767px) {
     .lead__title {
         max-width: 680px;
-        min-height: 100px;
         margin-bottom: 22px;
         font-size: 40px;
         line-height: 50px;
@@ -90,7 +75,6 @@
 @media (min-width: 1279px) {
     .lead__title {
         max-width: 640px;
-        min-height: 174px;
         margin-bottom: 36px;
         font-size: 50px;
         line-height: 58px;
@@ -102,10 +86,10 @@
     max-width: 260px;
     width: 100%;
     min-height: 32px;
-    margin: 0 auto 80px;
+    margin: 0 96px 80px 95px;
     opacity: 0.5;
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 13px;
     font-style: normal;
     font-weight: 400;
@@ -126,10 +110,9 @@
     }
 }
 
-.lead__button {
-    max-width: 129px;
-    width: 100%;
-    min-height: 36px;
+.lead__link {
+    text-decoration: none;
+    padding: 10px 20px;
     border: 1px solid #fff;
     border-radius: 3px;
     margin: 0 auto 30px;
@@ -144,18 +127,18 @@
     cursor: pointer;
 }
 
-.lead__button:hover {
+.lead__link:hover {
     opacity: 0.8;
  }
  
 @media (min-width: 767px) {
-    .lead__button {
+    .lead__link {
         margin-bottom: 76px;
     }
 }
 
 @media (min-width: 1279px) {
-    .lead__button {
-        margin: 0 0 75px 0;
+    .lead__link {
+        margin: 0;
     }
 }

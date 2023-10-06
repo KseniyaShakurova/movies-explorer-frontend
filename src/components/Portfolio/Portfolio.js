@@ -1,33 +1,37 @@
 import "./Portfolio.css";
+import { Link } from "react-router-dom";
 
 function Portfolio() {
   return (
     <section className="portfolio">
-      <h3 className="portfolio__title">Портфолио</h3>
+      <h2 className="portfolio__title">Портфолио</h2>
       <ul className="portfolio__links">
         <li className="portfolio__links-item">
-          <a
+          <Link
+            target="_blank"
             className="portfolio__link"
-            href="https://github.com/KseniyaShakurova/how-to-learn"
+            to="https://github.com/KseniyaShakurova/how-to-learn"
           >
             Статичный сайт
-          </a>
+          </Link>
         </li>
         <li className="portfolio__links-item">
-          <a
+          <Link
+            target="_blank"
             className="portfolio__link"
-            href="https://github.com/KseniyaShakurova/russian-travel"
+            to="https://github.com/KseniyaShakurova/russian-travel"
           >
             Адаптивный сайт
-          </a>
+          </Link>
         </li>
         <li className="portfolio__links-item portfolio__links-item_none-border">
-          <a
+          <Link
+            target="_blank"
             className="portfolio__link"
-            href="https://github.com/KseniyaShakurova/react-mesto-api-full-gha"
+            to="https://github.com/KseniyaShakurova/react-mesto-api-full-gha"
           >
             Одностраничное приложение
-          </a>
+          </Link>
         </li>
       </ul>
     </section>

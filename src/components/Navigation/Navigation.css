@@ -1,8 +1,9 @@
 .header__item {
-    max-width: 230px;
     margin: 0;
     display: flex;
+    padding: 0;
     gap: 20px;
+    list-style: none;
 }
 
 .header__list {
@@ -11,10 +12,9 @@
     max-width: 380px;
     width: 100%;
     align-items: center;
-    margin-right: 70px;
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
     .header__list {
         display: none;
     }
@@ -22,7 +22,7 @@
 
 .header__links {
     text-align: right;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
@@ -31,6 +31,10 @@
     color: #FFF;
     transition: opacity 1s ease; 
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 13px;
 }
 
 .header__links:hover {
@@ -39,14 +43,11 @@
 
 .header__account {
     max-width: 100px;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
     line-height: 16px;
-    display: flex;
-    align-items: center;
-    gap: 13px;
 }
 
 .header__button {

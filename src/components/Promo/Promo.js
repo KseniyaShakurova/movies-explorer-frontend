@@ -16,9 +16,7 @@ function Promo() {
         <p className="lead__subtitle">
           Листайте ниже, чтобы узнать больше про этот проект и его создателя.
         </p>
-        <button className="lead__button" type="button">
-          Узнать больше
-        </button>
+        <a href="#intro" className="lead__link">Узнать больше</a>
       </div>
     </section>
   );

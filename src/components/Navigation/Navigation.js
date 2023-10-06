@@ -4,20 +4,20 @@ import "./Navigation.css";
 function Navigation() {
   return (
     <div className="header__list">
-      <nav className="header__item">
-        <Link to="/movies" className="header__links" target="_blank">
+      <ul className="header__item">
+        <li><Link to="/movies" className="header__links">
           Фильмы
-        </Link>
-        <Link to="/saved-movies" className="header__links" target="_blank">
+        </Link></li>
+        <li>
+        <Link to="/saved-movies" className="header__links">
           Сохранённые фильмы
         </Link>
-      </nav>
+        </li>
+      </ul>
       <div className="header__account">
-        <Link to="/profile" className="header__links" target="_blank">
+        <Link to="/profile" className="header__links">
           Аккаунт
-        </Link>
-        <Link to="/profile">
-          <button className="header__button" type="button"></button>
+          <div className="header__button"></div>
         </Link>
       </div>
     </div>

@@ -1,95 +1,59 @@
 .techno {
-    max-width: 320px;
-    width: 100%;
     margin: 0;
-}
-
-@media (min-width: 767px) {
-    .techno {
-        max-width: 768px;
-    }
-}
-
-@media (min-width: 1023px) {
-    .techno {
-        max-width: 1024px;
-    }
-}
-
-@media (min-width: 1279px) {
-    .techno {
-        max-width: 1280px;
-    }
+    padding: 70px 0;
 }
 
 .techno__header {
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
-    margin: 0 auto 28px;
-    max-width: 284px;
+    margin: 0 18px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 28px;
 }
 
 @media (min-width: 767px) {
     .techno__header {
-        max-width: 652px;
         font-size: 22px;
         letter-spacing: -0.88px;
-        margin: 0 66px 23px 50px;
+        margin: 0 50px;
     }
 }
-
-@media (min-width: 1023px) {
-    .techno__header {
-        margin: 0 0px 23px 177px;
-    }
-}
-
 @media (min-width: 1279px) {
     .techno__header {
-        max-width: 600px;
-        margin: 0 610px 23px 70px;
+        margin: 0 70px;
     }
 }
 
 .techno__text {
-    border-top: 1px solid #000;
-    max-width: 284px;
     margin: 0 auto;
+    padding: 60px 14px 0;
 }
 
 @media (min-width: 767px) {
     .techno__text {
-        max-width: 668px;
-        
-    }
-}
-
-@media (min-width: 1024px) {
-    .techno__text {
-        max-width: 995px;
-        
+        padding: 80px 50px 0;
     }
 }
 
 @media (min-width: 1279px) {
     .techno__text {
-        max-width: 1140px;
+        padding: 90px 70px 0;
     }
 }
 
 .techno__title {
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -1.2px;
-    margin: 60px auto 24px;
+    margin: 0 0 24px;
 }
 
 @media (min-width: 767px) {
@@ -97,26 +61,26 @@
         font-size: 50px;
         line-height: 58px; /* 116% */
         letter-spacing: -2px;
-        margin: 80px auto 22px;
+        margin: 0 0 22px;
     }
 }
 
 @media (min-width: 1279px) {
     .techno__title {
-        margin: 90px auto 26px;
+        margin: 90px 0 26px;
     }
 }
 
 .techno__subtitle {
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: 16px; /* 145.455% */
     letter-spacing: -0.44px;
+    max-width: 284px;
     margin: 0 auto 50px;
-    max-width: 292px;
 }
 
 @media (min-width: 767px) {
@@ -124,8 +88,8 @@
         font-size: 12px;
         line-height: 18px; 
         letter-spacing: -0.48px;
-        margin: 0 auto 83px;
-        max-width: 460px;
+        margin: 0 104px 83px;
+        max-width: 100%;
     }
 }
 
@@ -140,26 +104,29 @@
 }
 
 .techno__table {
+    max-width: 178px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    padding: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 0 71px;
     gap: 10px;
     list-style: none;
-    margin-bottom: 70px;
-    max-width: 178px;
+    margin: 0 auto;
 }
 
 @media (min-width: 767px) {
     .techno__table {
+        max-width: 690px;
         grid-template-columns: repeat(7, 1fr);
-        max-width: 668px;
+        margin: 0 auto;
     }
 }
 
 @media (min-width: 1279px) {
     .techno__table {
         max-width: 690px;
+        margin: 0 auto;
     }
 }
 
@@ -167,12 +134,10 @@
     background-color: #303030;
     display: grid;
     border-radius: 10px;
-    max-width: 84px;
-    min-height: 57px;
-    width: 100%;
-    height: 100%;
+    width: 84px;
+    height: 57px;
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

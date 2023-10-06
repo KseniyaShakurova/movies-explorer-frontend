@@ -17,17 +17,22 @@ function MoviesCard({ film }) {
         <h2 className="moviescard__title">{film.name}</h2>
         <p className="moviescard__time">{film.time}</p>
       </div>
-      <img className="moviescard__img" src={film.foto} alt="film.name" />
+      <img className="moviescard__img" src={film.foto} alt={film.name} />
       {pathname === "/movies" ? (
         <div className="moviescard__buttons">
           {!saveMovies ? (
-            <button className="moviescard__button" onClick={handleClick}>
+            <button
+              className="moviescard__button"
+              onClick={handleClick}
+              type="button"
+            >
               Сохранить
             </button>
           ) : (
             <button
               className="moviescard__button moviescard__button_active"
               onClick={handleClick}
+              type="button"
             ></button>
           )}
         </div>
@@ -35,6 +40,7 @@ function MoviesCard({ film }) {
         <button
           className="moviescard__button moviescard__button_delete"
           onClick={handleClick}
+          type="button"
         ></button>
       )}
     </li>

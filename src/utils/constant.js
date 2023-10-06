@@ -1,15 +1,15 @@
-import filmOne from '../images/filmOne.svg';
-import filmTwo  from '../images/filmTwo.svg';
-import filmThree from '../images/filmThree.svg';
-import filmFour from '../images/filmOne.svg';
-import filmFive from '../images/filmTwo.svg';
-import filmSix  from '../images/filmThree.svg';
-import filmSeven from '../images/filmOne.svg';
-import filmEight from '../images/filmTwo.svg';
-import filmNine  from '../images/filmThree.svg';
-import filmTen from '../images/filmOne.svg';
-import filmEleven from '../images/filmTwo.svg';
-import filmTwelve  from '../images/filmThree.svg';
+import filmOne from '../images/filmOne.png';
+import filmTwo  from '../images/filmTwo.png';
+import filmThree from '../images/filmThree.png';
+import filmFour from '../images/filmOne.png';
+import filmFive from '../images/filmTwo.png';
+import filmSix  from '../images/filmThree.png';
+import filmSeven from '../images/filmOne.png';
+import filmEight from '../images/filmTwo.png';
+import filmNine  from '../images/filmThree.png';
+import filmTen from '../images/filmOne.png';
+import filmEleven from '../images/filmTwo.png';
+import filmTwelve  from '../images/filmThree.png';
 
 
 

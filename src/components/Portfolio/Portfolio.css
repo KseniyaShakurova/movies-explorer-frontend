@@ -1,86 +1,59 @@
 .portfolio {
     margin: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #202020;
-    background-size: 100%;
+    padding: 0 14px 70px;
 }
 
 @media (min-width: 767px) {
     .portfolio {
-       max-width: 768px;
+       padding: 0 50px 90px;
     }
 }
 
 @media (min-width: 1023px) {
     .portfolio {
-       max-width: 1204px;
-    }
-}
-
-@media (min-width: 1279px) {
-    .portfolio {
-       max-width: 1280px;
+       padding: 0 70px 125px;
     }
 }
 
 .portfolio__title {
-    max-width: 292px;
     color: #A0A0A0;
     font-feature-settings: 'clig' off, 'liga' off;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    margin: 0 auto 40px;
+    margin: 0;
 }
 
 @media (min-width: 767px) {
     .portfolio__title {
-       max-width: 250px;
        font-size: 18px;
-       margin: 0 0 50px 50px;
     }
 }
 
 @media (min-width: 1023px) {
     .portfolio__title {
-       max-width: 250px;
        font-size: 18px;
-       margin: 0 177px 50px;
-    }
-}
-
-@media (min-width: 1279px) {
-    .portfolio__title {
-       margin-left: 70px;
     }
 }
 
 .portfolio__links {
-    max-width: 292px;
-    margin: 0 auto 70px;
+    padding-top: 40px;
     list-style: none;
     padding: 0;
     display: grid;
     gap: 20px;
+    margin: 0;
 }
 
 @media (min-width: 767px) {
     .portfolio__links {
-       max-width: 668px;
-    }
-}
-
-@media (min-width: 1279px) {
-    .portfolio__links {
-       max-width: 1140px;
+        padding-top: 50px;
     }
 }
 
 .portfolio__links-item {
-    max-width: 292px;
     border-bottom: 1px solid #E6E6E6;
     margin: 0;
     padding: 0 0 19px;
@@ -94,13 +67,12 @@
 
 @media (min-width: 767px) {
     .portfolio__links-item {
-       max-width: 668px;
+       width: 100%;
     }
 }
 
 @media (min-width: 1279px) {
     .portfolio__links-item {
-        max-width: 1140px;
         border-bottom: 1px solid #424242;
     }
 }
@@ -111,7 +83,7 @@
 }
 
 .portfolio__link {
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
@@ -120,7 +92,7 @@
     color: #FFF;
     text-decoration: none;
     background-image: url(../../images/iconPort.svg);
-    background-size: 18px 28px;
+    background-size: 20px;
     background-repeat: no-repeat;
     background-position: right;
     background-color:rgba(0,0,0,0);

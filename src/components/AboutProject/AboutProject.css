@@ -1,47 +1,26 @@
 .intro {
-    max-width: 320px;
-    width: 100%;
     margin: 0;
-}
-
-@media (min-width: 767px) {
-    .intro {
-        max-width: 768px;
-    }
-}
-
-@media (min-width: 1023px) {
-    .intro {
-        max-width: 1024px;
-        
-    }
-}
-
-@media (min-width: 1279px) {
-    .intro {
-        max-width: 1280px;
-    }
+    padding: 70px 0;
 }
 
 .intro__header {
     text-align: left;
-    max-width: 284px;
-    width: 100%;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
-    margin: 70px auto 28px;
+    margin: 0 18px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid;
 }
 
 @media (min-width: 767px) {
     .intro__header {
-        max-width: 600px;
         letter-spacing: -0.88px;
+        margin: 0 50px;
         font-size: 22px;
-        margin: 90px 118px 23px 50px;
         font-size: 22px;
         letter-spacing: -0.88px;
     }
@@ -49,64 +28,46 @@
 
 @media (min-width: 1279px) {
     .intro__header {
-        margin: 110px 610px 23px 70px;
+        margin: 0 70px;
     }
 }
 
 .intro__container {
-    max-width: 284px;
-    border-top: 1px solid;
-    margin: 0 auto 60px;
-    padding: 60px 0 0;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     gap: 56px;
+    padding: 70px 18px 69px;
 }
 
 @media (min-width: 767px) {
     .intro__container {
-        max-width: 668px;
-        padding-top: 70px;
+        padding: 90px 50px;
         gap: 30px;
         flex-direction: row;
-        justify-content: space-around;
-    }
-}
-
-@media (min-width: 1023px) {
-    .intro__container {
-        max-width: 924px;
-        padding-top: 70px;
-        gap: 30px;
-        flex-direction: row;
-        justify-content: space-around;
     }
 }
 
 @media (min-width: 1279px) {
     .intro__container {
+        padding: 70px 50px 110px;
         max-width: 1140px;
-        padding-top: 70px;
-        gap: 40px;
     }
 }
 
-
-
 .intro__title {
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: -0.72px;
     margin: 0 0 16px;
-    width: 100%
 }
 
 @media (min-width: 767px) {
     .intro__title {
-        max-width: 319px;
         font-size: 20px;
         letter-spacing: -0.8px;
     }
@@ -114,15 +75,15 @@
 
 @media (min-width: 1279px) {
     .intro__title {
-        max-width: 550px;
         font-size: 20px;
         letter-spacing: -0.8px;
+        max-width: 550px;
     }
 }
 
 .intro__subtitle {
     margin: 0;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -145,25 +106,22 @@
 }
 
 .intro__time {
-    margin: 0 auto 69px;
+    margin: 0 18px;
     display: grid;
     grid-template-columns: 100px auto;
     align-self: center;
-    max-width: 284px;
 }
 
 @media (min-width: 767px) {
     .intro__time {
         grid-template-columns: 1fr 4fr;
-        max-width: 668px;
-        margin-bottom: 90px;
+        margin: 0 50px;
     }
 }
 
 @media (min-width: 1279px) {
     .intro__time {
-        max-width: 1140px;
-        margin-bottom: 110px;
+        margin: 0 70px;
     }
 }
 
@@ -179,7 +137,7 @@
 
 .intro__time-title {
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
@@ -214,7 +172,7 @@
     width: 100%;
     color: #A0A0A0;
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;

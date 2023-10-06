@@ -1,33 +1,29 @@
 .movies__button {
-    max-width: 320px;
-    margin: 0 auto;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    padding: 50px 10px 80px;
 }
 
 @media (min-width: 767px) {
     .movies__button{
-       max-width: 768px;
-    }
-}
-
-@media (min-width: 1279px) {
-    .movies__button {
-       max-width: 1280px;
-       margin-bottom: 71px;
+       padding-left: 30px;
+       padding-right: 30px;
     }
 }
 
 .movies__btn {
-    margin: 50px auto 80px;
     border-radius: 6px;
     background: #2F2F2F;
+    text-align: center;
+    padding: 0;
     width: 300px;
     height: 36px;
     border: none;
     color: #FFF;
     text-align: center;
-    font-family: Inter;
+    font-family: "Inter", Arial, sans-serif;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
@@ -41,7 +37,7 @@
  }
  
  @media (min-width: 767px) {
-    .moviesc__btn {
+    .movies__btn {
         width: 708px;
     }
 }
