@@ -107,7 +107,9 @@
     font-weight: 400;
     line-height: 11px;
     border: none;
+    transition: opacity 1s ease; 
     padding: 0;
+    cursor: pointer;
 }
 
 .moviescard__button:hover {
@@ -122,6 +124,7 @@
 
  .moviescard__button_active {
     background-image: url('../../images/buttonsev.svg');
+    background-size: 100px 29px;
  }
 
  .moviescard__button_delete {
@@ -129,6 +132,5 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 7px 7px;
-    transition: opacity 1s ease; 
     cursor: pointer;
  }

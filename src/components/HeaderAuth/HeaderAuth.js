@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function HeaderAuth() {
   return (
     <nav className="header__item">
-      <Link to="/signup" className="header__link">
+      <Link to="/signup" className="header__signup">
         Регистрация
       </Link>
-      <Link to="/signin" className="header__link header__link_entrance">
+      <Link to="/signin" className="header__signup header__signup_entrance">
         Войти
       </Link>
     </nav>

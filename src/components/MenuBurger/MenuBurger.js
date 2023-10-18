@@ -27,13 +27,21 @@ function MenuBurger({ onClose, isMenu }) {
               </Link>
             </li>
             <li className="menu__popup-item">
-              <Link to="/saved-movies" className="menu__popup-link" onClick={onClose}>
+              <Link
+                to="/saved-movies"
+                className="menu__popup-link"
+                onClick={onClose}
+              >
                 Сохранённые фильмы
               </Link>
             </li>
           </ul>
           <div className="menu__popup-footer">
-            <Link to="/profile" className="menu__popup-account" onClick={onClose}>
+            <Link
+              to="/profile"
+              className="menu__popup-account"
+              onClick={onClose}
+            >
               Аккаунт
               <div className="menu__popup-btn"></div>
             </Link>

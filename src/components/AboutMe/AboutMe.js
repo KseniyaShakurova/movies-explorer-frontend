@@ -23,6 +23,7 @@ function AboutMe() {
             target="_blank"
             className="aboutme__link"
             to="https://github.com/KseniyaShakurova"
+            rel="noreferrer"
           >
             Github
           </Link>

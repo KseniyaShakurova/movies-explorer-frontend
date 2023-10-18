@@ -1,49 +1,101 @@
 import "./MoviesCard.css";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-function MoviesCard({ film }) {
-  const [saveMovies, setSaveMovies] = useState(false);
+function MoviesCard({
+  name,
+  movieData,
+  savedMovies,
+  onSaveOrDelete,
+  onDelete,
+  isSavedMovies,
+}) {
+  const [clicked, setClicked] = useState(false);
+  const { nameRU, duration, trailerLink } = movieData;
 
-  function handleClick() {
-    setSaveMovies(!saveMovies);
+  const imageUrl = `${
+    name === "movies"
+      ? `https://api.nomoreparties.co${movieData.image.url}`
+      : movieData.image
+  }`;
+
+  useEffect(() => {
+    if (name === "movies")
+      setClicked(
+        savedMovies.some((element) => movieData.id === element.movieId)
+      );
+  }, [savedMovies, movieData.id, setClicked, name]);
+
+  function onClick() {
+    if (savedMovies.some((element) => movieData.id === element.movieId)) {
+      setClicked(false);
+      onSaveOrDelete(movieData);
+    } else {
+      setClicked(false);
+      onSaveOrDelete(movieData);
+    }
   }
 
-  const { pathname } = useLocation();
+  function getMovieDuration(duration) {
+    const hours = Math.floor(duration / 60);
+    const minutes = duration % 60;
+
+    if (hours === 0) {
+      return `${minutes}м`;
+    } else {
+      return `${hours}ч ${minutes}м`;
+    }
+  }
 
   return (
-    <li className="moviescard__item">
+    <div className="moviescard__item">
       <div className="moviescard__info">
-        <h2 className="moviescard__title">{film.name}</h2>
-        <p className="moviescard__time">{film.time}</p>
+        <h2 className="moviescard__title">{nameRU}</h2>
+        <p className="moviescard__time">
+          {getMovieDuration(duration)}
+        </p>
       </div>
-      <img className="moviescard__img" src={film.foto} alt={film.name} />
-      {pathname === "/movies" ? (
+      <a href={trailerLink} target="_blank" rel="noreferrer">
+        <img
+          className="moviescard__img"
+          src={imageUrl}
+          alt={nameRU}
+        />
+      </a>
+      {name === "movies" ? (
         <div className="moviescard__buttons">
-          {!saveMovies ? (
+          {!clicked ? (
             <button
               className="moviescard__button"
-              onClick={handleClick}
               type="button"
+              onClick={() => {
+                !onClick || isSavedMovies
+                  ? onDelete(movieData._id ? movieData._id : movieData._id)
+                  : onSaveOrDelete(movieData);
+              }}
             >
               Сохранить
             </button>
           ) : (
             <button
-              className="moviescard__button moviescard__button_active"
-              onClick={handleClick}
+              className=" moviescard__button moviescard__button_active"
               type="button"
+              onClick={() => {
+                !onClick || isSavedMovies
+                  ? onDelete(movieData._id ? movieData._id : movieData._id)
+                  : onSaveOrDelete(movieData);
+              }}
             ></button>
           )}
         </div>
       ) : (
         <button
           className="moviescard__button moviescard__button_delete"
-          onClick={handleClick}
           type="button"
+          aria-label="Удалить"
+          onClick={() => onDelete(movieData._id)}
         ></button>
       )}
-    </li>
+    </div>
   );
 }
 

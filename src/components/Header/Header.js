@@ -7,7 +7,7 @@ import "./Header.css";
 import { useLocation } from "react-router-dom";
 import MenuBurger from "../MenuBurger/MenuBurger";
 
-function Header({ loggedIn }) {
+function Header({ isLoggedIn }) {
   const location = useLocation();
   const [isMenu, setIsMenu] = useState(false);
 
@@ -30,7 +30,7 @@ function Header({ loggedIn }) {
       <Link to="/" className="header__logo">
         <img src={logo} className="header__img" alt="логотип" />
       </Link>
-      {loggedIn ? headerLoginIn : <HeaderAuth />}
+      {isLoggedIn ? headerLoginIn : <HeaderAuth />}
     </header>
   );
 }

@@ -1,14 +1,22 @@
 import "./FilterCheckbox.css";
 
-function FilterCheckbox() {
+function FilterCheckbox({ switchTumbler, initialSearch, checked }) {
   return (
     <div className="filterCheckbox">
-      <form className="filterCheckbox__form">
-      <label className="filterCheckbox__label">
-        <input type="checkbox" className="filterCheckbox__input" />
-        <span className="filterCheckbox__switch"></span>
-      </label>
-      </form>
+      <div className="filterCheckbox__form">
+        <label className="filterCheckbox__label">
+          <input
+            type="checkbox"
+            className="filterCheckbox__input"
+            name="filterCheckbox"
+            id="filterCheckbox"
+            checked={checked}
+            onChange={() => switchTumbler()}
+            disabled={initialSearch}
+          />
+          <span className="filterCheckbox__switch"></span>
+        </label>
+      </div>
       <p className="filterCheckbox__title">Короткометражки</p>
     </div>
   );
