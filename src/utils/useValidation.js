@@ -21,7 +21,7 @@ export default function useFormValidation() {
     const form = e.target.form;
 
     if (name === "email") {
-      const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+      const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
       if (!emailRegex.test(value)) {
         validationMessage = "Неверный формат email адреса";
       }

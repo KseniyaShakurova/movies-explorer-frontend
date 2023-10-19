@@ -29,6 +29,11 @@ function App() {
   const [infoToolTipPopupOpen, setInfoToolTipPopupOpen] = useState(false);
   const [infoTooltipTitle, setInfoTooltipTitle] = useState("");
   const [isTokenChecked, setIsTokenChecked] = useState(false);
+  const [apiErrors, setApiErrors] = React.useState({
+    login: {},
+    register: {},
+    profile: {},
+  });
 
   const navigate = useNavigate();
 

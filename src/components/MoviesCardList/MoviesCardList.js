@@ -3,6 +3,12 @@ import MoviesCard from "../MoviesCard/MoviesCard";
 import Preloader from "../Preloader/Preloader";
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
+import {
+  NUMBER_CARDS_SCREEN_1280,
+  NUMBER_CARDS_SCREEN_768,
+  NUMBER_CARDS_SCREEN_320,
+  PAGINATION_CARDS,
+} from "../../utils/constant";
 
 function MoviesCardList({
   name,
@@ -14,7 +20,6 @@ function MoviesCardList({
   onSaveOrDelete,
   savedMovies,
   isSavedMovies,
-  
 }) {
   const { pathname } = useLocation();
   const [seeMoviesCards, setSeeMoviesCards] = useState(0);
@@ -23,13 +28,13 @@ function MoviesCardList({
     const updateSeeMovies = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth >= 1280) {
-        setSeeMoviesCards(12);
+        setSeeMoviesCards(NUMBER_CARDS_SCREEN_1280);
       } else if (screenWidth >= 768) {
-        setSeeMoviesCards(8);
+        setSeeMoviesCards(NUMBER_CARDS_SCREEN_768);
       } else if (screenWidth >= 480) {
-        setSeeMoviesCards(5);
+        setSeeMoviesCards(NUMBER_CARDS_SCREEN_320);
       } else {
-        setSeeMoviesCards(5);
+        setSeeMoviesCards(NUMBER_CARDS_SCREEN_320);
       }
     };
 
@@ -44,13 +49,13 @@ function MoviesCardList({
   const handleShowMore = () => {
     const screenWidth = window.innerWidth;
     if (screenWidth >= 1280) {
-      setSeeMoviesCards(seeMoviesCards + 3);
+      setSeeMoviesCards(seeMoviesCards + PAGINATION_CARDS);
     } else if (screenWidth >= 768) {
-      setSeeMoviesCards(seeMoviesCards + 3 - 1);
+      setSeeMoviesCards(seeMoviesCards + PAGINATION_CARDS - 1);
     } else if (screenWidth >= 480) {
-      setSeeMoviesCards(seeMoviesCards + 3 - 1);
+      setSeeMoviesCards(seeMoviesCards + PAGINATION_CARDS - 1);
     } else {
-      setSeeMoviesCards(seeMoviesCards + 3 - 1);
+      setSeeMoviesCards(seeMoviesCards + PAGINATION_CARDS - 1);
     }
   };
 
@@ -116,12 +121,3 @@ function MoviesCardList({
 }
 
 export default MoviesCardList;
-
-
-
-
-
-
-
-
-

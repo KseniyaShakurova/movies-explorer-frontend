@@ -149,7 +149,13 @@
     background-color: #3456F3;;
     color: #FFF;
     padding: 10px 0;
+    transition: opacity 1s ease; 
+    cursor: pointer;
 }
+
+.profile__btn-save:hover {
+    opacity: 0.8;
+ }
 
 .profile__btn-save-nonActive {
     background-color: #424242;

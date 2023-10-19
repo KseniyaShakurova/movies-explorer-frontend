@@ -2,19 +2,19 @@ import "./Profile.css";
 import { Link } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
 import { CurrentUserContext } from "../../contexts/CurrentUserContext";
-import useValidation from "../../utils/useValidation";
+import { validateMail, validateName } from "../../utils/validateProfile";
 
 function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
-  const { isValid } = useValidation();
+  
   const currentUser = useContext(CurrentUserContext);
   const [data, setData] = useState({
     email: currentUser.email,
     name: currentUser.name,
   });
   
-  const [isActiveEdit, setActiveEdit] = useState(false);
-  const [isActiveSave, setActiveSave] = useState(false);
+  
   const [errors, setErrors] = useState({});
+  const [isValid, setIsValid] = useState(false);
 
   useEffect(() => {
     if (!isLoggedIn) {
@@ -25,6 +25,17 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
     }
   }, [currentUser.name, currentUser.email, isLoggedIn]);
 
+  
+
+  const [isActiveEdit, setActiveEdit] = useState(false);
+  const [isActiveSave, setActiveSave] = useState(false);
+  
+  const [isValidName, setisValidName] = useState(false)
+  const [isValidEmail, setIsValidEmail] = useState(false);
+  const [isDisabled, setIsDisabled] = useState(false);
+
+  
+
   const handleChange = (event) => {
     const target = event.target;
     const { name, value } = target;
@@ -32,6 +43,13 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
       ...data,
       [name]: value,
     });
+    if (name === 'name') {
+      setisValidName(validateName(target, name, value));
+      setIsValidEmail(true)
+    } else if (name === 'email') {
+      setIsValidEmail(validateMail(target, name, value));
+      setisValidName(true)
+    }
     setErrors({
       ...errors,
       [name]: target.validationMessage,
@@ -44,8 +62,22 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
     onEditProfile({ email, name });
   };
 
-  const isVision =
-    currentUser.name === data.name && currentUser.email === data.email;
+  useEffect(() => {
+    if (isValidEmail && isValidName) {
+      setIsValid(true)
+    } else {
+      setIsValid(false)
+    }
+  }, [isValidEmail, isValidName])
+
+  useEffect(() => {
+    if ((currentUser.name === data.name) && (currentUser.email === data.email)) {
+      setIsDisabled(true)
+    } else {
+      setIsDisabled(false)
+    }
+  }, [currentUser, data])
+
 
   function handleIsActive() {
     setActiveEdit(!isActiveEdit);
@@ -64,14 +96,11 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
               name="name"
               type="text"
               id="name"
-              minLength="2"
-              maxLength="30"
               placeholder="Имя"
               required
-              value={data.name ? data.name : ""}
+              value={data.name || " "}
               onChange={handleChange}
               disabled={!isActiveEdit}
-              pattern="^[A-Za-zА-Яа-яЁё\-\s]+$"
             />
           </div>
           <span
@@ -90,13 +119,10 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
               name="email"
               type="email"
               required
-              value={data.email ? data.email : ""}
+              value={data.email || " "}
               onChange={handleChange}
-              minLength="2"
-              maxLength="30"
               placeholder="E-mail"
               disabled={!isActiveSave}
-              pattern="^[a-zA-Z0-9_.+\-]+@[a-zA-Z0-9\-]+\.[a-zA-Z0-9\-.]+$"
             />
           </div>
           <span
@@ -123,13 +149,13 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
             <button
               className={
                 isActiveSave
-                  ? !isVision
+                  ? isValid
                     ? "profile__btn-save"
                     : "profile__btn-save profile__btn-save-nonActive"
                   : "profile__btn-save profile__btn-save-disabled"
               }
               type="submit"
-              disabled={isVision}
+              disabled={!isValid}
               onClick={handleIsActive}
             >
               Сохранить
@@ -146,3 +172,7 @@ function Profile({ isLoggedIn, onEditProfile, handleLogOut }) {
 }
 
 export default Profile;
+
+
+
+
