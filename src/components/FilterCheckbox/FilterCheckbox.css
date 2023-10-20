@@ -1,0 +1,115 @@
+.filterCheckbox {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 13px;
+}
+
+@media (min-width: 767px) {
+    .filterCheckbox {
+       gap: 14px;
+    }
+}
+
+.filterCheckbox__title {
+    font-family: "Inter", Arial, sans-serif;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+@media (min-width: 767px) {
+    .filterCheckbox__title {
+       font-size: 13px;
+    }
+}
+
+.filterCheckbox__label {
+	display: flex;
+    align-items: center;  
+	height: 28px;    
+	line-height: 28px;     
+	position: relative;
+	vertical-align: middle;
+	font-size: 14px;
+	user-select: none;
+}
+
+.filterCheckbox__switch {
+    transition: opacity 1s ease; 
+    cursor: pointer;
+}
+
+.filterCheckbox__switch:hover {
+    opacity: 0.7;
+ }
+
+.filterCheckbox__label .filterCheckbox__switch {
+    position: relative;	
+	display: flex;
+	align-items: center;
+	box-sizing: border-box;	
+	width: 36px;
+	height: 20px;
+	border: 1px solid rgba(0, 0, 0, .1);
+	border-radius: 25%/50%;	
+	vertical-align: top;
+	background: #EBEBEB;
+	transition: .2s;
+}
+
+.filterCheckbox__label .filterCheckbox__switch:before {
+    content: '';
+	position: absolute;
+	top: 5px;
+	left: 6px;
+	width: 8px;	
+	height: 8px;
+	border-radius: 50%;
+	background: #F5F5F5;
+	transition: .3s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+
+.filterCheckbox__label input[type=checkbox] {
+	display: block;	
+	width: 0;
+	height: 0;	
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.filterCheckbox__label input[type=checkbox]:not(:disabled):active + .filterCheckbox__switch:before {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+}
+
+.filterCheckbox__label input[type=checkbox]:checked + .filterCheckbox__switch {
+    background: #2BE080
+}
+
+.filterCheckbox__label input[type=checkbox]:checked + .filterCheckbox__switch:before {
+    transform:translateX(18px);
+}
+
+
+.filterCheckbox__label input[type="checkbox"]:not(:disabled) + .filterCheckbox__switch {
+	cursor: pointer;
+	border-color: rgba(0, 0, 0, .3);
+}
+
+
+.filterCheckbox__label input[type=checkbox]:disabled + .filterCheckbox__switch {
+	filter: grayscale(70%);
+	border-color: rgba(0, 0, 0, .1);
+}
+.filterCheckbox__label input[type=checkbox]:disabled + .filterCheckbox__switch:before {
+	background: #EBEBEB;
+}
+ 
+
+.filterCheckbox__label.focused .filterCheckbox__switch:before {
+	box-shadow: inset 0px 0px 4px #ff5623;
+}
+
